@@ -1,3 +1,5 @@
+ifeq ($(PRODUCT_USES_QCOM_HARDWARE), true)
+
 LIBJSON_ROOT := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libjson
@@ -32,3 +34,5 @@ LOCAL_SHARED_LIBRARIES := libcutils libutils
 LOCAL_MODULE_TAG := optional
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
+
+endif
