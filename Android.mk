@@ -4,6 +4,8 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libjson
 LOCAL_CFLAGS := -Werror -Wno-error=unused-parameter
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
+LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 LOCAL_SRC_FILES := arraylist.c \
 		debug.c \
 		json_c_version.c \
