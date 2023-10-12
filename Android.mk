@@ -1,5 +1,3 @@
-ifeq ($(PRODUCT_USES_QCOM_HARDWARE), true)
-
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -21,5 +19,3 @@ LOCAL_SHARED_LIBRARIES := libcutils libutils
 LOCAL_MODULE_TAG := optional
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
-
-endif
